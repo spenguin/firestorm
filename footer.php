@@ -1,5 +1,5 @@
-</main>
-<?php get_sidebar(); ?>
+<!-- </main> -->
+<?php //get_sidebar(); ?>
 </div>
 <footer id="footer" role="contentinfo">
 <div id="copyright">

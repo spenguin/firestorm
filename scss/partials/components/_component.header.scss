@@ -1,0 +1,69 @@
+/** Styles for header */
+header {
+    background-color: $OHGrey;
+    padding-bottom: 0.5rem;
+}
+
+.header-bar {
+    background-color: $OHGreen;
+    color: $OHWhite;
+    position: relative;
+    a {
+        color: $OHWhite;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        padding: 0.85rem 0;
+        &:hover {
+            color: $OHLightGreen;
+        }
+    }
+    &__logo {
+        position: absolute;
+        width: 4.5rem;
+        top: 0;
+        a {
+            padding: 0;
+        }
+        @include screen-greater-than(tablet)
+        {
+            width: 8.5rem;
+        }
+        @include screen-greater-than(desktop)
+        {
+            width: 10.5rem;
+        }
+    }
+}
+
+.header-icon-container {
+    display: flex;
+    justify-content: end;
+    padding-right: 0.25rem;
+    @include screen-greater-than(tablet)
+    {
+        padding-right: 2.5rem;
+        margin-top: 0.85rem;
+    }
+    a {
+        margin-left: 0.85rem;
+        color: $OHWhite;
+        font-size: 1rem;
+        @include screen-greater-than(tablet)
+        {
+            font-size: 2rem;
+            margin-left: 1.15rem;
+        }
+    }
+}
+
+.fa-shopping-cart {
+    position: relative;
+    span {
+        position: absolute;
+        left: 40%;
+        top: 25%;
+        font-size: 1.25rem;
+        color: $OHRed;
+    }
+}

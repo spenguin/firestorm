@@ -1,13 +1,13 @@
 /*
-Theme Name: Occassionally Honey
-description: Occassionally Honey theme  
+Theme Name: Firestorm
+description: Firestorm theme  
 Author: John Anderson of Weirdspace
 Author URI: http://weirdspace.com
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive-layout, accessibility-ready
-Text Domain: ohhoney
+Text Domain: firestorm
 */
 /* Blank Slate clean styles */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -1128,122 +1128,51 @@ textarea {
 /** Colours*/
 /** Fonts */
 @font-face {
-  font-family: "BelleFair";
-  src: url("assets/fonts/Bellefair-Regular.woff2") format("woff2"), url("assets/fonts/Bellefair-Regular.woff") format("woff");
+  font-family: "Bungee";
+  src: url("assets/fonts/bungee.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("assets/fonts/Poppins-SemiBold.woff2") format("woff2"), url("assets/fonts/Poppins-SemiBold.woff") format("woff");
+  font-family: "Tahoma";
+  src: url("assets/fonts/tahoma.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
-@font-face {
-  font-family: "Poppins";
-  src: url("assets/fonts/Poppins-Regular.woff2") format("woff2"), url("assets/fonts/Poppins-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Tahoma", sans-serif;
 }
 
-/** Variables */
-/** Breakpoints */
-/* Max width wrapper */
-.max-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
+/** Component styles aggregator */
+/** Styles for header */
+#header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #E30F09D9;
 }
 
-.hidden {
-  display: none;
+.home-link {
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
-/** Mixins */
-/**
-Function to generate an RGB colour backgrund with a provided opacity
-(https://stackoverflow.com/questions/10929458/sass-converting-hex-to-rgba-for-background-opacity)
-*/
-/*
-element {
-     @include background-opacity(#333, 0.5);
-}*/
-/**
-Function to wrap appropriate media query around content
-param: screen size, either tablet or desktop 
-Requires breakpoints to be set or imported
-*/
-/**
-Function to provide necessary prefixes for grayscale (sic) filter
-param: percentage filtered
-Note: Yes, this should probably take a parameter of _which_ filter to apply. Maybe next time
-http://shouldiprefix.com/#filters
-*/
-/** Structure styling */
-body {
-  background: #0D0D0D;
-  color: #fff;
-}
-
-.max-wrapper {
-  padding: 0 5%;
-}
-
-/** WRappers styles */
-.max-wrapper {
-  padding: 0 5%;
-}
-@media screen and (min-width: 768px) {
-  .max-wrapper {
-    padding: 0 15%;
-  }
-}
-.max-wrapper__narrow {
-  max-width: 729px;
-  margin: 0 auto;
-}
-
-.cta--wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-/** Section styles */
-.store-front-open {
-  background-color: #262627;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 1rem;
-}
-.store-front-open h2 {
-  color: #fff;
-}
-
-.homepage--newsletter-signup {
-  background-color: #A6CA44;
-  padding: 1.25rem 5%;
-  margin-left: -5%;
-  margin-right: -5%;
+.home-link a {
+  text-indent: -9999px;
+  background: url("assets/FSVD-TextLogo-Light.svg") no-repeat;
+  overflow: hidden;
+  display: block;
+  background-position: center;
+  line-height: min(20vw, 10rem);
 }
 
 /** Elements aggregator */
-/** Text styling */
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
 /** Heading Styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Bellefair", serif;
+  font-family: "Bungee", serif;
   text-align: center;
 }
 
 h2 {
   font-size: 2.25rem;
-  color: #fff;
 }
 
 h3 {
@@ -1254,499 +1183,6 @@ h4 {
   font-size: 1rem;
   text-transform: uppercase;
   color: black;
-}
-
-/** Button styles */
-.button {
-  border-radius: 0.125rem !important;
-  text-transform: uppercase;
-  font-family: "Bellefair", serif;
-  font-weight: 700;
-  text-align: center;
-  padding: 0.5rem 1.25rem !important;
-  box-shadow: 7px 7px 0 -3px #0D0D0D !important;
-  background-color: #637329 !important;
-  color: #A6CA44 !important;
-}
-.button:hover {
-  color: #fff !important;
-}
-
-/** Forms style */
-/** Slides styles */
-/** Component styles aggregator */
-/** Styles for header */
-header {
-  background-color: #262627;
-  padding-bottom: 0.5rem;
-}
-
-.header-bar {
-  background-color: #637329;
-  color: #fff;
-  position: relative;
-}
-.header-bar a {
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  padding: 0.85rem 0;
-}
-.header-bar a:hover {
-  color: #A6CA44;
-}
-.header-bar__logo {
-  position: absolute;
-  width: 4.5rem;
-  top: 0;
-}
-.header-bar__logo a {
-  padding: 0;
-}
-@media screen and (min-width: 768px) {
-  .header-bar__logo {
-    width: 8.5rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header-bar__logo {
-    width: 10.5rem;
-  }
-}
-
-.header-icon-container {
-  display: flex;
-  justify-content: end;
-  padding-right: 0.25rem;
-}
-@media screen and (min-width: 768px) {
-  .header-icon-container {
-    padding-right: 2.5rem;
-    margin-top: 0.85rem;
-  }
-}
-.header-icon-container a {
-  margin-left: 0.85rem;
-  color: #fff;
-  font-size: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .header-icon-container a {
-    font-size: 2rem;
-    margin-left: 1.15rem;
-  }
-}
-
-.fa-shopping-cart {
-  position: relative;
-}
-.fa-shopping-cart span {
-  position: absolute;
-  left: 40%;
-  top: 25%;
-  font-size: 1.25rem;
-  color: #BF3434;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-primary-container {
-    display: flex;
-    justify-content: end;
-  }
-}
-.menu-primary-container ul {
-  display: flex;
-  margin: 0;
-  padding: 0.85rem 0.25rem;
-  list-style: none;
-  justify-content: space-between;
-}
-@media screen and (min-width: 768px) {
-  .menu-primary-container ul {
-    width: 75%;
-    margin-right: 2.5rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .menu-primary-container ul {
-    width: 50%;
-  }
-}
-.menu-primary-container ul a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 768px) {
-  .menu-primary-container ul a {
-    font-size: 1rem;
-  }
-}
-.menu-primary-container ul a:hover {
-  text-decoration: underline;
-}
-
-/** Footer styles */
-footer {
-  background-color: #262627;
-  padding-top: 1.25rem;
-  color: #fff;
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-  padding-bottom: 2.25rem;
-}
-footer h1 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 400;
-}
-footer .footer--social-media {
-  font-size: 2.25rem;
-  display: flex;
-  justify-content: center;
-}
-footer .footer--social-media a {
-  margin-left: 0.5rem;
-}
-footer .footer--social-media a:first-of-type {
-  margin-left: 0;
-}
-footer .footer--secondary-nav {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  footer .footer--secondary-nav {
-    flex-direction: row;
-    text-align: inherit;
-    justify-content: space-between;
-    width: 50%;
-    padding-left: 0.85%;
-    padding-right: 0.85%;
-  }
-}
-
-/** Section styles */
-.homepage--newsletter-signup__content {
-  background-color: #262627;
-  color: #fff;
-}
-.homepage--newsletter-signup__content span {
-  color: #A6CA44;
-  text-transform: uppercase;
-}
-
-.frozen-desserts {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 1rem;
-  background-size: cover;
-  background-position-y: 25%;
-}
-.frozen-desserts h2 {
-  color: #fff;
-}
-.frozen-desserts h4 {
-  color: #fff;
-}
-
-.introduction {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 1rem;
-}
-
-/** Newsletter signup style */
-.w-full {
-  width: 100%;
-}
-
-.h-10 {
-  line-height: 2.5rem !important;
-  padding: 0 !important;
-}
-
-.p-2 {
-  padding: 0 0.5rem !important;
-}
-
-.homepage--newsletter-signup__inner form {
-  padding: 5%;
-}
-.homepage--newsletter-signup__inner p {
-  font-size: 1.25rem;
-  color: #A6CA44;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-.homepage--newsletter-signup__content {
-  padding: 0.25rem 0.85rem;
-}
-
-/** Shop Filter styles */
-.shop--filter__wrapper {
-  padding-left: 0.85rem;
-}
-.shop--filter__button {
-  cursor: pointer;
-  text-align: center;
-}
-.shop--filter__category {
-  cursor: pointer;
-}
-.shop--filter__category-name:hover {
-  background-color: #A6CA44;
-  color: #0D0D0D;
-}
-.shop--filter__category-name.selected {
-  color: #A6CA44;
-}
-
-/** Shop Products styles */
-.shop--products__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.shop--products__item {
-  width: 164px;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
-}
-.shop--products__item-name {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1.5rem 0.25rem;
-}
-.shop--products__item-name h3 {
-  font-size: 1.25rem;
-}
-
-/** Market styling */
-.markets {
-  padding-top: 1.5rem;
-}
-.markets h2 {
-  color: #fff;
-}
-.markets__inner {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .markets__inner {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-.markets_market {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  padding: 2rem 0.25rem;
-  padding-right: 0.25rem;
-  padding-left: 0.25rem;
-  margin: 0 auto 2rem auto;
-  border-radius: 0.1875rem;
-  text-align: center;
-  width: 328px;
-}
-.markets_market h3 {
-  line-height: 2rem;
-  height: 5rem;
-}
-.markets_market h3 i {
-  margin-left: 0.45rem;
-  font-size: 1rem;
-}
-.markets_market p i {
-  margin-left: 0.45rem;
-  font-size: 0.75rem;
-}
-
-/** Recipe Display */
-.recipes h2 {
-  color: #fff;
-}
-.recipes h4 {
-  color: #fff;
-}
-.recipes__wrapper {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .recipes__wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-.recipes__recipe {
-  width: 328px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 0 auto 2rem auto;
-  border-radius: 0.1875rem;
-}
-.recipes__recipe--name {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1.5rem 0.25rem;
-}
-
-/** Shop category style */
-.show--category__selected {
-  padding-left: 0.85rem;
-}
-
-/** Cards styles */
-.card--link {
-  width: 328px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin: 0 auto 2rem auto;
-  border-radius: 0.1875rem;
-}
-.card__wrapper {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .card__wrapper {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-}
-.card--name {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1.5rem 0.25rem;
-}
-
-/** Woocommerce styles */
-.product {
-  padding: 0 2%;
-}
-
-.woocommerce-product-gallery__image {
-  margin-bottom: 0.5rem;
-}
-
-.single_add_to_cart_button {
-  border-radius: 0.125rem !important;
-  text-transform: uppercase;
-  font-family: "Bellefair", serif;
-  font-weight: 700 !important;
-  text-align: center;
-  padding: 0.5rem 1.25rem !important;
-  box-shadow: 7px 7px 0 -3px #0D0D0D !important;
-  background-color: #637329 !important;
-  color: #A6CA44 !important;
-}
-.single_add_to_cart_button:hover {
-  color: #fff !important;
-}
-
-.variations .label {
-  text-align: left;
-}
-
-.variations select {
-  width: 250px;
-}
-
-.variations_button {
-  display: flex;
-}
-.variations_button .quantity {
-  margin-right: 0.5rem;
-}
-
-/** Woocommerce Notices Wrapper */
-.woocommerce-notices-wrapper,
-.wc-empty-cart-message,
-.return-to-shop {
-  padding: 0 5%;
-}
-@media screen and (min-width: 768px) {
-  .woocommerce-notices-wrapper,
-.wc-empty-cart-message,
-.return-to-shop {
-    padding: 0 15%;
-  }
-}
-.woocommerce-notices-wrapper__narrow,
-.wc-empty-cart-message__narrow,
-.return-to-shop__narrow {
-  max-width: 729px;
-  margin: 0 auto;
-}
-
-/** Single Product styles */
-.single-product {
-  margin-bottom: 2rem;
-}
-.single-product--header {
-  background-color: #0D0D0D;
-}
-.single-product--wrapper {
-  background-color: #0D0D0D;
-}
-@media screen and (min-width: 1200px) {
-  .single-product--wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .single-product--images {
-    width: 48%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .single-product--content {
-    width: 48%;
-  }
-}
-.single-product .cart {
-  margin-bottom: 2rem;
-}
-
-/** Store Opening Home Page styles */
-.store-hours__days {
-  list-style: none;
-  margin-bottom: 0;
-}
-.store-hours__days li {
-  list-style: none;
-}
-
-.store-front-open a {
-  color: #A6CA44;
-}
-.store-front-open a:hover {
-  color: #637329;
 }
 
 /*# sourceMappingURL=style.css.map */

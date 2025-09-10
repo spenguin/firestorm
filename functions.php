@@ -24,8 +24,8 @@ define( 'CORE_JS', CORE_URL . '/js/' );
 
 require_once CORE_INC . 'blank-slate.php';
 // // require_once CORE_INC . 'enqueue.php';
-// require_once CORE_INC . 'custom-posts.php';
-// require_once CORE_INC . 'shortcodes.php';
+require_once CORE_INC . 'custom-posts.php';
+require_once CORE_INC . 'shortcodes.php';
 // require_once CORE_INC . 'site-functions.php';
 // // require_once CORE_INC . 'post2post.php';
 // require_once CORE_INC . 'wcextension.php';

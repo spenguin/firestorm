@@ -1,0 +1,36 @@
+<?php
+/**
+ * Render Recipes on Home Page
+ */
+
+function fs_services_display( $atts = [], $content = null, $tag = '' )
+{
+    // extract(shortcode_atts(array(
+    //     'name' => '',
+    //  ), $atts));
+    // if( empty($name)) return '';
+
+
+    $args = [
+        'post_type'         => 'service',
+        'posts_per_page'    => -1
+    ];
+
+    $query = new WP_Query( $args );
+    ob_start();
+        if( $query->have_posts() ): ?>
+            <section class="services">
+                <!-- <h2>Recipes</h2>
+                <h4>Healthy, Delicious Recipes</h4> -->
+                <div class="max-wrapper services__wrapper">
+                        <?php while( $query->have_posts()): $query->the_post(); ?>
+                        <div class="services__tile tile">
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php the_content(); ?></p>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            </section>
+        <?php endif; wp_reset_postdata();
+    return ob_get_clean();
+}

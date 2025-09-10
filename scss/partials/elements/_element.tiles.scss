@@ -1,0 +1,10 @@
+/** Tiles styling */
+
+.tile {
+    width: 22.5rem;
+    height: 22.5rem;
+    border-radius: $borderRadius;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+    padding: 1.75rem;
+}

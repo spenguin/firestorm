@@ -21,13 +21,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 @import "partials/settings.global";
 @import "partials/settings.colours";
 @import "partials/fonts.all";
-// @import "partials/variables";
+@import "partials/variables";
 
-// @import "partials/tools/mixins";
+@import "partials/tools/mixins";
 // // //@import "partials/tools/mediaqueries";
 
 // @import "partials/structure/structure.blocks";
-// @import "partials/structure/structure.wrappers";
+@import "partials/structure/structure.wrappers";
 // @import "partials/structure/structure.sections";
 // @import "partials/elements.all";
 

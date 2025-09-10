@@ -1143,6 +1143,57 @@ body {
   font-family: "Tahoma", sans-serif;
 }
 
+/** Variables */
+/** Breakpoints */
+/* Max width wrapper */
+.max-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/** Mixins */
+/**
+Function to generate an RGB colour backgrund with a provided opacity
+(https://stackoverflow.com/questions/10929458/sass-converting-hex-to-rgba-for-background-opacity)
+*/
+/*
+element {
+     @include background-opacity(#333, 0.5);
+}*/
+/**
+Function to wrap appropriate media query around content
+param: screen size, either tablet or desktop 
+Requires breakpoints to be set or imported
+*/
+/**
+Function to provide necessary prefixes for grayscale (sic) filter
+param: percentage filtered
+Note: Yes, this should probably take a parameter of _which_ filter to apply. Maybe next time
+http://shouldiprefix.com/#filters
+*/
+/** WRappers styles */
+.max-wrapper {
+  padding: 0 5%;
+}
+@media screen and (min-width: 768px) {
+  .max-wrapper {
+    padding: 0 15%;
+  }
+}
+.max-wrapper__narrow {
+  max-width: 729px;
+  margin: 0 auto;
+}
+
+.cta--wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /** Component styles aggregator */
 /** Styles for header */
 #header {
@@ -1164,6 +1215,21 @@ body {
   line-height: min(20vw, 10rem);
 }
 
+/** Services styling */
+.services__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Vertically centers the items */
+  justify-content: center;
+}
+.services__tile {
+  margin-bottom: 0.85rem;
+}
+.services h3 {
+  color: #E30F09D9;
+}
+
 /** Elements aggregator */
 /** Heading Styles */
 h1, h2, h3, h4, h5, h6 {
@@ -1183,6 +1249,16 @@ h4 {
   font-size: 1rem;
   text-transform: uppercase;
   color: black;
+}
+
+/** Tiles styling */
+.tile {
+  width: 22.5rem;
+  height: 22.5rem;
+  border-radius: 0.1875rem;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  padding: 1.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */

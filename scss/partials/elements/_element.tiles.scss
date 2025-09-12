@@ -1,8 +1,20 @@
 /** Tiles styling */
 
+.tiles {
+    display: flex;
+    flex-direction: column;
+    @include screen-greater-than(tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding: 3%;
+    }
+}
 .tile {
-    width: 22.5rem;
-    height: 22.5rem;
+    width: 350px;
+    height: 350px;
     border-radius: $borderRadius;
     background-color: #ffffff;
     box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);

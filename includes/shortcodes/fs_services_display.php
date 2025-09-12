@@ -22,7 +22,7 @@ function fs_services_display( $atts = [], $content = null, $tag = '' )
             <section class="services">
                 <!-- <h2>Recipes</h2>
                 <h4>Healthy, Delicious Recipes</h4> -->
-                <div class="max-wrapper services__wrapper">
+                <div class="services__wrapper tiles">
                         <?php while( $query->have_posts()): $query->the_post(); ?>
                         <div class="services__tile tile">
                             <h3><?php the_title(); ?></h3>

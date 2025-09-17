@@ -1,0 +1,24 @@
+/** Styling for Products Teaser */
+
+.products-teaser {
+    background-color: $FSDarkGrey;
+    h2 {
+        color: $FSWhite;
+    }
+    &__tile {
+        border-color: $FSDarkRed;
+        background-color: $FSLightGrey;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+        padding-bottom: 0;
+        h3 {
+            color: $FSWhite;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1.5rem 0.25rem;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Render Recipes on Home Page
+ * Render Services on Home Page
  */
 
 function fs_services_display( $atts = [], $content = null, $tag = '' )
@@ -20,8 +20,8 @@ function fs_services_display( $atts = [], $content = null, $tag = '' )
     ob_start();
         if( $query->have_posts() ): ?>
             <section class="services">
-                <!-- <h2>Recipes</h2>
-                <h4>Healthy, Delicious Recipes</h4> -->
+                <h2>Services</h2>
+                <!-- <h4>Healthy, Delicious Recipes</h4> -->
                 <div class="services__wrapper tiles">
                         <?php while( $query->have_posts()): $query->the_post(); ?>
                         <div class="services__tile tile">

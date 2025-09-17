@@ -1194,42 +1194,7 @@ http://shouldiprefix.com/#filters
   justify-content: center;
 }
 
-/** Component styles aggregator */
-/** Styles for header */
-#header {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: #E30F09D9;
-}
-
-.home-link {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.home-link a {
-  text-indent: -9999px;
-  background: url("assets/FSVD-TextLogo-Light.svg") no-repeat;
-  overflow: hidden;
-  display: block;
-  background-position: center;
-  line-height: min(20vw, 10rem);
-}
-
-/** Services styling */
-.services__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Vertically centers the items */
-  justify-content: center;
-}
-.services__tile {
-  margin-bottom: 0.85rem;
-}
-.services h3 {
-  color: #E30F09D9;
-}
-
+/** Section styles */
 /** Elements aggregator */
 /** Heading Styles */
 h1, h2, h3, h4, h5, h6 {
@@ -1255,6 +1220,8 @@ h4 {
 .tiles {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .tiles {
@@ -1263,7 +1230,7 @@ h4 {
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
-    padding: 3%;
+    padding: 0 3%;
   }
 }
 
@@ -1274,6 +1241,61 @@ h4 {
   background-color: #ffffff;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   padding: 1.75rem;
+  margin-bottom: 0.85rem;
+  border: 1px solid #000000;
+}
+
+/** Component styles aggregator */
+/** Styles for header */
+#header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #E30F09D9;
+}
+
+.home-link {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.home-link a {
+  text-indent: -9999px;
+  background: url("assets/FSVD-TextLogo-Light.svg") no-repeat;
+  overflow: hidden;
+  display: block;
+  background-position: center;
+  line-height: min(20vw, 10rem);
+}
+
+/** Services styling */
+.services h2 {
+  color: #4b0c11;
+}
+.services h3 {
+  color: #E30F09D9;
+}
+
+/** Styling for Products Teaser */
+.products-teaser {
+  background-color: #0D0D0D;
+}
+.products-teaser h2 {
+  color: #FFFFFF;
+}
+.products-teaser__tile {
+  border-color: #4b0c11;
+  background-color: #a7a6a6;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  padding-bottom: 0;
+}
+.products-teaser__tile h3 {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 0.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */

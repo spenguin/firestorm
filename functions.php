@@ -32,8 +32,8 @@ require_once CORE_INC . 'shortcodes.php';
 // // require_once CORE_INC . 'calendar-functions.php';
 // require_once CORE_INC . 'widgets.php';
 // // require_once CORE_INC . 'hooks.php';
-// require_once CORE_INC . 'product-functions.php';
-// require_once CORE_INC . 'tools.php';
+require_once CORE_INC . 'product-functions.php';
+require_once CORE_INC . 'tools.php';
 // require_once CORE_INC . 'slideshow.php';
 // require_once CORE_INC . 'shop-hours-settings.php';
 

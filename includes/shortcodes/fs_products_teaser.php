@@ -26,6 +26,9 @@ function fs_products_teaser( $atts = [], $content = null, $tag = '' )
                     <?php endwhile; endif; wp_reset_postdata();
                 ?>
             </div>
+            <div class="cta--wrapper">
+                <a href="products" class="button button-link" href="products">See all our Products</a>
+            </div>
         </section>
     <?php
     return ob_get_clean();

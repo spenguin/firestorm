@@ -1245,6 +1245,22 @@ h4 {
   border: 1px solid #000000;
 }
 
+/** Button styles */
+.button {
+  border-radius: 0.125rem !important;
+  text-transform: uppercase;
+  font-family: "Bungee", serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5rem 1.25rem !important;
+  box-shadow: 7px 7px 0 -3px #0D0D0D !important;
+  background-color: #4b0c11 !important;
+  color: #f03f39d9 !important;
+}
+.button:hover {
+  color: #FFFFFF !important;
+}
+
 /** Component styles aggregator */
 /** Styles for header */
 #header {
@@ -1277,6 +1293,7 @@ h4 {
 /** Styling for Products Teaser */
 .products-teaser {
   background-color: #0D0D0D;
+  padding-bottom: 1.25rem;
 }
 .products-teaser h2 {
   color: #FFFFFF;

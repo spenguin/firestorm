@@ -10,8 +10,9 @@ import ProductPage from "./Components/ProductPage.jsx";
 
 ReactDOM.render(
     <ProductPage
-        terms       = {terms}
-        products    = {products}
+        collection_children = {collection_children}
+        products_children   = {products_children}
+        products            = {products}
     />,
     document.getElementById('ProductPage')
 );

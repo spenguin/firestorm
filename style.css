@@ -1243,6 +1243,15 @@ h4 {
   padding: 1.75rem;
   margin-bottom: 0.85rem;
   border: 1px solid #000000;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.tile h3 {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 0.25rem;
 }
 
 /** Button styles */
@@ -1313,6 +1322,55 @@ h4 {
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1.5rem 0.25rem;
+}
+
+/** Shop Filter styles */
+.shop--filter__wrapper {
+  padding-left: 0.85rem;
+}
+.shop--filter__button {
+  cursor: pointer;
+  text-align: center;
+}
+.shop--filter__category {
+  cursor: pointer;
+}
+.shop--filter__category-name:hover {
+  background-color: #f03f39d9;
+  color: #0D0D0D;
+}
+.shop--filter__category-name.selected {
+  color: #f03f39d9;
+}
+
+/** Shop Products styles */
+.shop--products__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.shop--products__item {
+  width: 164px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.shop--products__item-name {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 0.25rem;
+}
+.shop--products__item-name h3 {
+  font-size: 1.25rem;
+}
+
+/** Shop category style */
+.show--category__selected {
+  padding-left: 0.85rem;
 }
 
 /*# sourceMappingURL=style.css.map */

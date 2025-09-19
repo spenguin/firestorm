@@ -12,11 +12,11 @@
     }
     &__category-name {
         &:hover {
-            background-color: $OHLightGreen;
-            color: $OHDarkGrey;
+            background-color: $FSLightRed;
+            color: $FSDarkGrey;
         }
         &.selected {
-            color: $OHLightGreen;
+            color: $FSLightRed;
         }
     }
 

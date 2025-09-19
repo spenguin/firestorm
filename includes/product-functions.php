@@ -32,7 +32,7 @@ function get_products()
 
         // A hack to get the images [FIX]
         $imageStr = get_the_post_thumbnail_url();
-        $imageUrl = substr( $imageStr, 0, -4 ) . '-324x324' . substr( $imageStr, strlen($imageStr)-4 );
+        $imageUrl = $imageStr; //substr( $imageStr, 0, -4 ) . '-350x350' . substr( $imageStr, strlen($imageStr)-4 );
 
 
         $o[$ID]   = [

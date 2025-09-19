@@ -23,4 +23,13 @@
     padding: 1.75rem;
     margin-bottom: 0.85rem;
     border: 1px solid #000000;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h3 {
+            color: $FSWhite;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 1.5rem 0.25rem;
+    }
 }

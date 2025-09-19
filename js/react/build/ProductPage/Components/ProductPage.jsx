@@ -10,12 +10,13 @@ import ProductPageList from './_ProductPageList.jsx';
 
 // import css
 
-const ProductPage = ({terms, products}) => {//console.log('terms', terms);
+const ProductPage = ({collection_children, products_children, products}) => {
 
     // Set State vars
     const [selectedCategory, setSelectedCategory]   = useState('');
     const [filteredProducts, setFilteredProducts]   = useState(products);
     const [selectedTerm, setSelectedTerm]           = useState('');
+    var terms = collection_children;
 
     // set change functions
     useEffect(()=>{ 
@@ -24,7 +25,7 @@ const ProductPage = ({terms, products}) => {//console.log('terms', terms);
             setFilteredProducts(
                 products.filter(p => p.category.includes(selectedCategory ))
             );
-            let tmp = terms.filter( t => t.slug == selectedCategory ); console.log('tmp', tmp);
+            let tmp = terms.filter( t => t.slug == selectedCategory ); //console.log('tmp', tmp);
             setSelectedTerm( tmp[0].name )
         }
     },[selectedCategory])

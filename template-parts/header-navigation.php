@@ -10,5 +10,3 @@
         <!-- <li ><a href="https://oh.weirdspace.xyz/contact/">Contact</a></li> -->
     <!-- </ul> -->
 <!-- </div> -->
-
-<h1 class="home-link"><a href="/">Firestorm Vector Designs</a></h1>

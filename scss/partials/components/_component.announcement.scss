@@ -1,0 +1,20 @@
+/** Announcement styling */
+
+.announcement {
+    background-color: $FSRed;
+    color: $FSWhite;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.35rem;
+    padding: 0.25rem 2.5%;
+    // &__wrapper {
+
+    // }
+    a {
+        color: $FSLightGrey;
+        text-decoration: none;
+        &:hover {
+            color: $FSOrange
+        }
+    }
+}

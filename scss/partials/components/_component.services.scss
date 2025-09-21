@@ -5,8 +5,19 @@
     h2 {
         color: $FSDarkRed;
     }
-    h3 {
-        color: $FSRed;
-        background-color: $FSWhite;
+
+    &__tile {
+        justify-content: space-between!important;
+        align-items: center;
+        img {
+            width: 120px;
+            height: 120px;
+        }
+        h3 {
+            color: $FSRed;
+            background-color: $FSWhite;
+            line-height:2rem;
+            padding-bottom: 0;
+        }        
     }
 }

@@ -15,8 +15,9 @@ const ProductPage = ({collection_children, products_children, products}) => {
     // Set State vars
     const [selectedCategory, setSelectedCategory]   = useState('');
     const [filteredProducts, setFilteredProducts]   = useState(products);
-    const [selectedTerm, setSelectedTerm]           = useState('');
-    var terms = collection_children;
+    const [selectedCollection, setSelectedCollection]   = useState('');
+    const [selectedProducts, setSelectedProducts]   = useState('');
+
 
     // set change functions
     useEffect(()=>{ 
@@ -25,7 +26,7 @@ const ProductPage = ({collection_children, products_children, products}) => {
             setFilteredProducts(
                 products.filter(p => p.category.includes(selectedCategory ))
             );
-            let tmp = terms.filter( t => t.slug == selectedCategory ); //console.log('tmp', tmp);
+            let tmp = collection_children.filter( t => t.slug == selectedCategory ); //console.log('tmp', tmp);
             setSelectedTerm( tmp[0].name )
         }
     },[selectedCategory])
@@ -33,7 +34,7 @@ const ProductPage = ({collection_children, products_children, products}) => {
 
     return (
         <>
-            <ProductPageFilter
+            {/* <ProductPageFilter
                 terms = {terms}
                 setSelectedCategory = {setSelectedCategory}
             />
@@ -41,7 +42,7 @@ const ProductPage = ({collection_children, products_children, products}) => {
                 {selectedTerm.length > 0 && 
                     <span>Selected: {selectedTerm}</span>
                 }
-            </div>
+            </div> */}
             <ProductPageList
                 filteredProducts = {filteredProducts}
                 selectedCategory = {selectedCategory}

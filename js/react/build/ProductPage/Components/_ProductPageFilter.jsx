@@ -24,7 +24,7 @@ const ProductPageFilter = ({terms, setSelectedCategory}) => {
         <div className="shop--filter">
             <div className="shop--filter__menu">
                 <div className="shop--filter__button" onClick={() => changeShowFilter()}>
-                    View Filter
+                    Filter by Collection
                 </div>
                 {showFilter ?
                     <div className="shop--filter__wrapper max-wrapper__narrow">

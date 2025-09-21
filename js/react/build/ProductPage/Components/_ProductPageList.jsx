@@ -11,7 +11,7 @@ const ProductPageList = ({filteredProducts, selectedCategory}) => { //console.lo
             {filteredProducts.map(p => { //console.log( 'p', p );
                 // const backgroundUrl = p.image; 
                 return (
-                    <a href={p.url} style={{backgroundImage:`url(${p.image})`}} className="tile">
+                    <a href={p.url} style={{backgroundImage:`url(${p.image})`}} className="tile disable-anchor">
                         {/* <div className="shop--products__item-name"> */}
                             <h3>{p.title}</h3>
                         {/* </div> */}

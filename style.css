@@ -1276,6 +1276,11 @@ h4 {
   color: #FFFFFF !important;
 }
 
+/** Anchor styling */
+.disable-anchor {
+  pointer-events: none;
+}
+
 /** Component styles aggregator */
 /** Styles for header */
 #header {
@@ -1306,9 +1311,19 @@ h4 {
 .services h2 {
   color: #4b0c11;
 }
-.services h3 {
+.services__tile {
+  justify-content: space-between !important;
+  align-items: center;
+}
+.services__tile img {
+  width: 120px;
+  height: 120px;
+}
+.services__tile h3 {
   color: #E30F09D9;
   background-color: #FFFFFF;
+  line-height: 2rem;
+  padding-bottom: 0;
 }
 
 /** Styling for Products Teaser */
